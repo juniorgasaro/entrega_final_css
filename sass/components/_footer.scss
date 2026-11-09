@@ -1,0 +1,34 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixin" as *;
+
+footer {
+    background-color: #9a9999;
+    padding: 10px;
+    color: #0c0c0c;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    justify-content: space-evenly;
+    margin-top: 20px;
+
+    img {
+        max-width: 80px;
+        height: auto;
+    }
+
+    .redes-footer {
+        display: flex;
+        gap: 20px;
+    }
+
+    .contacto-footer {
+        display: flex;
+        gap: 20px;
+    }
+
+    @include responsive {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

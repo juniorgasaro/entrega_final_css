@@ -1,0 +1,53 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+.proyectos-trabajados {
+    text-align: center;
+
+    h2 {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .cards-proyectos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+        gap: 24px;
+        margin: 20px;
+
+        .card {
+            padding: 10px;
+            color: #dfdede;
+            background-color: #9f9d9d43;
+            border-radius: 10px;
+
+            figure {
+                    margin-bottom: 10px;
+            }
+
+            img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 10px;    
+                transition: all ease 0.5s;
+
+                &:hover {
+                    transform: scale(0.90);
+                }
+            }
+        }
+    }
+}
+
+.contacto-proyectos {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+
+    button {
+        @extend %button-base;
+    }
+}

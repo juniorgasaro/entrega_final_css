@@ -1,0 +1,101 @@
+
+@use "../utilities/variables" as v;
+@use "../utilities/mixin" as *;
+
+// HEADER
+header {
+    width: 100%;
+    padding: 40px;
+    background: linear-gradient(
+        to bottom,
+        rgb(0, 0, 0) 0%,
+        rgba(35, 33, 33, 0.038) 100%
+    );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+
+    .header-left {
+        flex-shrink: 0;
+
+        img {
+            width: 120px;
+            height: auto;
+            padding: 10px;
+        }
+    }
+
+    .header-right {
+        text-transform: uppercase;
+    }
+
+    // NAVBAR BOOTSTRAP
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        border-color: #ffffff;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    // Icono hamburguesa blanco
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    // Enlaces de Bootstrap
+    .navbar-nav {
+        display: flex;
+        gap: 3rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-weight: 600;
+        color: #a2a1a1;
+        padding: 10px 15px;
+        border-radius: 2px;
+        transition: color 0.3s ease, top 0.3s ease;
+        text-transform: uppercase;
+
+        &:hover {
+            text-decoration: underline;
+            color: #d5d1d1;
+            position: relative;
+            top: -2px;
+        }
+    }
+
+    // RESPONSIVE
+    @include responsive {
+
+        display: block;
+        padding: 20px;
+
+        .header-left {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .navbar {
+            width: 100%;
+        }
+
+        .navbar-nav {
+            gap: 1rem;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .navbar-collapse {
+            text-align: center;
+        }
+    }
+}

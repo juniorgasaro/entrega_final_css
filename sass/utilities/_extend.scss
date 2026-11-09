@@ -1,0 +1,23 @@
+%flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%button-base {
+    margin-top: 24px;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 12px;
+    background: #282829;
+    color: rgb(231, 231, 231);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        background: #9d9d9e;
+    }
+}

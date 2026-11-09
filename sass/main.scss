@@ -1,0 +1,10 @@
+@use "./utilities/reset";
+
+@use "./components/header";
+@use "./components/footer";
+
+@use "./layout/home";
+@use "./layout/nuestro-equipo";
+@use "./layout/servicios";
+@use "./layout/trabajos-realizados";
+@use "./layout/contacto";
